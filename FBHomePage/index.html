@@ -1,0 +1,878 @@
+﻿<!DOCTYPE html>
+
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Facebook</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="maincss.css">
+    <style>
+        header {
+            color: white;
+            font-size: 15px;
+        }
+
+        .fbsearch {
+            background-color: #fff;
+            border: 1px solid #3b5998;
+            border-radius: 3px;
+            box-sizing: border-box;
+            height: 26px;
+            left: -1px;
+            margin-top: 0;
+            max-width: 448px;
+            overflow: hidden;
+            padding-left: 5px;
+            top: 8px;
+            width: auto;
+        }
+
+        .form-inline, .form-control {
+            height: 23px;
+            width: 392px !important;
+        }
+
+        .form-control {
+            padding: 0;
+            border-color: white;
+        }
+
+        .d-flex > button {
+            border: unset;
+        }
+
+        .rounded-circle {
+            width: 25px;
+            height: 25px;
+        }
+
+        .d-flex a {
+            color: #ffffff;
+            text-decoration: none;
+            padding-left: 17px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            float: left;
+        }
+
+            .d-flex a i {
+                color: #1d2129;
+                font-size: 21px;
+                padding-top: 4px;
+            }
+
+        .search {
+            width: 100%;
+            float: left;
+            margin-top: 7px;
+            margin-left: -15px;
+        }
+
+        .d-flex {
+        }
+
+        .mx-5 {
+            margin-left: 7rem !important;
+            margin-right: 7rem !important;
+        }
+
+        body {
+            background-color: #e9ebee;
+        }
+
+        .table {
+            border: 0;
+        }
+
+            .table i {
+                color: #235d97;
+                font-size: 18px;
+                margin-right: 3px;
+            }
+
+            .table td, .table th {
+                padding: 3px;
+            }
+
+            .table a {
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+            }
+
+        .spanbv {
+            background-color: #f5f6f7;
+            border-bottom: 1px solid #dddfe2;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(221, 223, 226);
+            font-weight: bold;
+            padding: 8px 6px;
+        }
+
+        .card {
+            background-color: white;
+            margin-top: 12px;
+            font-size: 13px;
+        }
+
+        .txtarea {
+            resize: none;
+            border: 0;
+            width: 90%;
+            height: 100%;
+            padding: 10px 0px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .col-lg-2 > .rounded-circle {
+            width: 40px;
+            height: 40px;
+            margin-top: 12px;
+            margin-left: 12px;
+        }
+
+        #taophong {
+            border-top: 1px solid #e9ebee;
+            padding: 8px 0;
+        }
+
+        .tao {
+            background-color: #f5f6f7;
+            border-radius: 18px;
+            padding: 6px 10px;
+            margin-right: 8px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+            .tao i {
+                font-size: 15px;
+            }
+
+        .aphonghop {
+            color: gray;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .dphonghop {
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 8px;
+        }
+
+        .ava .rounded-circle {
+            width: 40px;
+            height: 40px;
+        }
+
+        .row > .col-lg-3 > .tin {
+            width: 111px;
+            height: 199px;
+            left: -43px;
+            padding: 0px;
+        }
+
+        .row > .col-lg-3 {
+            padding: 0px;
+        }
+
+        .fa-caret-right {
+            color: #616770;
+            font-size: 20px;
+            padding: 0px 10px;
+        }
+
+        .shaun {
+            color: #1d2129;
+            font: 14px Helvetica, arial,sans-serif;
+            margin: 6px 0px;
+        }
+
+        .flex-row #xemthem {
+            display: inline;
+            color: #4267B2;
+            float: unset;
+            font: 14px Helvetica, arial,sans-serif;
+            padding: unset;
+        }
+
+        .d-inline-flex > .icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        #reaction {
+            color: #606770;
+            font: 13px Helvetica, arial,sans-serif;
+            margin: 3px 0px 0px 4px
+        }
+
+        .d-likecmt {
+            width: 238px;
+            height: 42px;
+        }
+
+        .a-likecmt > .s-likecmt {
+            color: #606770;
+            font-weight: 700;
+            margin-left: 6px;
+            font-size: 14px;
+        }
+
+        .d-tin {
+            width: 474px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px;
+        }
+
+            .d-tin .img-tin {
+                width: 111px;
+                height: 100%;
+                border-radius: 10px
+            }
+
+        .d-lang .a-lang {
+            color: #385898;
+            padding: 0px 5px 0px 5px;
+            font-size: 13px;
+            font-weight: unset;
+        }
+        .d-lang
+        {
+            width:238px;
+        }
+        .d-chat {
+            padding: 4px 0px;
+        }
+
+        .s-namechat {
+            color: #333333;
+            padding-left: 4px;
+            font-size: 12px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .img-chat {
+            width: 32px;
+            height: 32px;
+        }
+
+        .fa-circle {
+            color: rgb(66, 183, 42);
+            font-size: 6px;
+        }
+
+        .s-circle {
+            padding-right: 4px;
+        }
+
+        .li-chat {
+            padding: 4px 8px 4px 16px;
+        }
+
+        li:hover {
+            background-color: #dbdbdb
+        }
+
+        .s-setchat {
+            /*padding-right: 8px;*/
+        }
+        .nav-tao:hover
+        {
+            background-color:#4b517c70;
+        }
+        .nav-tao
+        {
+            align-items:center;
+        }
+        .a-mt-1
+        {
+            padding:0px 12px!important;
+            /*border-right:1px solid #385898;*/
+        }
+        .nav-a-icon
+        {
+            padding:4px!important;
+            margin:0px 2px;
+            
+        }
+        .nav-a-icon i
+        {
+            color:#212f4b;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navestylemenublock sticky-top">
+    <div id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #4267B2;height: 43px;">
+        <div class="container px-0 mx-5">
+            <div class="d-flex justify-content-start flex-inline">
+                <a class="navbar-brand" href="https://www.facebook.com/">
+                    <img src="facebook-logo.png" style="width:39px;height:32px;" alt="fblogo" title="Vào trang chủ Facebook" />
+                </a>
+                <div class="search">
+                    <div class="fbsearch" style="float:right;margin-left:0">
+                        <div class="d-flex justify-content-end">
+                            <form class="form-inline" action="/action_page.php">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                            </form>
+                            <button class="px-3" style="background-color:#f5f6f7;color:gray;">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end flex-inline" style="margin-right:100px;">
+                <div style="align-content:center">                  
+                    <div class="d-inline-flex" style="display:inline-block;">
+                        <div class="nav-tao">
+                            <a class="a-mt-1" href="#" style="margin-bottom:3px">
+                                <span>
+                                    <img class="rounded-circle"
+                                         src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-1/cp0/p40x40/74533113_2464252220511487_176293349345460224_n.jpg?_nc_cat=108&amp;_nc_sid=dbb9e7&amp;_nc_ohc=DFMPLBhzSw0AX9Rq5cu&amp;_nc_ht=scontent.fhan5-5.fna&amp;oh=2f79f3d61a390788fefac5270934cda1&amp;oe=5F355C3E">
+                                </span>
+                                <span>Vân</span>
+                            </a>
+                            <!--<a class="a-mt-1" href="#" style="padding-left: 7px;">Vân</a>-->
+                        </div>
+                        <div class="nav-tao">
+                            <a class="a-mt-1" href="#">Trang chủ</a>
+                        </div>
+                        <div class="nav-tao">
+                            <a class="a-mt-1" href="#">Tạo</a>
+                        </div>
+                    </div>
+                    <div class="d-inline-flex" style="display:inline-block">
+                        <div>
+                            <a class="nav-a-icon" href="#" title="Lời mời kết bạn">
+                                <i class="fas fa-user-friends"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-a-icon" href="#" title="Tin nhắn">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-a-icon" href="#" title="Thông báo">
+                                <i class="fas fa-bell"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="d-inline-flex" style="display:inline-block">
+                        <div>
+                            <a class="nav-a-icon" href="#">
+                                <i class="fas fa-user-cog"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-a-icon" href="#" title="Trợ giúp nhanh">
+                                <i class="fas fa-question-circle"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-a-icon" href="#">
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</div></div>
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-9 ">
+            <div class="row">
+                <div class="col-lg-2 fixed-top-left" style="padding-left:42px;padding-right:unset">
+
+                    <div class="mt-3" style="font-size:90%;margin:12px 12px 12px 0px">
+                        <img class="rounded-circle" style="width:20px;height:20px"
+                             src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-1/cp0/p32x32/74533113_2464252220511487_176293349345460224_n.jpg?_nc_cat=108&amp;_nc_sid=dbb9e7&amp;_nc_ohc=6rU1IwU5dFAAX-Yb5e_&amp;_nc_ht=scontent.fhan5-5.fna&amp;oh=545d0145ff53d528698110c3b64251c5&amp;oe=5F36C4A5"
+                             alt="" draggable="false">
+                        Bùi Vân
+                    </div>
+
+                    <table class="table table-hover table-borderless">
+                        <thead style="background-color:rgba(255, 255, 255, 0.80)">
+                            <tr>
+
+                                <th>
+                                    <a href="#">
+                                        <i class="fas fa-newspaper"></i>
+                                        Bảng tin
+                                    </a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <!--<i class="fab fa-facebook-messenger" style="font-size:20px; margin-left: 3px;"></i>-->
+                                        <img src="icon-mess.png" style="width:20px;height:20px" />
+                                        Messenger
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-tv"></i>
+                                        Watch
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-home" style="font-size:20px"></i>
+                                        Marketplace
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <tr>
+                                <th> Lối tắt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-music" style="color:mediumpurple;"></i>
+                                        o day co mot bai...
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-hamburger" style="color:#c24f14;"></i>
+                                        Hội review đồ ăn...
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#" style="color:#235d97">
+                                        <i class="fas fa-caret-down" style="color:gray"></i>
+                                        Xem thêm...
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-hover table-borderless">
+                        <thead>
+                            <tr>
+                                <th> Khám phá</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fab fa-font-awesome-flag" style="color:orangered"></i>
+                                        Trang
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="far fa-calendar-minus mr-1" style="color:#94103d;"></i>
+                                        Sự kiện
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-users" style="margin-right:3px;font-size:100%"></i>
+                                        Nhóm
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        <i class="fas fa-user-tag" style="margin-right:3px;font-size:100%"></i>
+                                        Danh sách bạn bè
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#" style="color:#235d97">
+                                        <i class="fas fa-caret-down" style="color:gray"></i>
+                                        Xem thêm...
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="spanbv">
+                            <a href="#" style="color:#595d61">Tạo bài viết</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+
+                                <img class="rounded-circle" src="https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-1/p100x100/74533113_2464252220511487_176293349345460224_n.jpg?_nc_cat=108&amp;_nc_sid=dbb9e7&amp;_nc_ohc=6rU1IwU5dFAAX8Sfz1_&amp;_nc_ht=scontent.fhan5-5.fna&amp;_nc_tp=6&amp;oh=0a6a5b5aa06f3460754281bc34b2a0a3&amp;oe=5F37C790"
+                                     alt="" aria-label="Bùi Vân" role="img">
+
+                            </div>
+                            <div class="col-lg-10" style="padding:0px;">
+                                <textarea class="txtarea" title="Vân ơi, bạn đang nghĩ gì?" placeholder="Vân ơi, bạn đang nghĩ gì?"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-inline" id="taophong" style="border-top: 1px solid #e9ebee;padding:12px;">
+                            <div class="tao">
+                                <span>
+                                    <i class="fas fa-video" style="color:mediumpurple"></i>
+                                    Tạo phòng họp
+                                </span>
+                            </div>
+                            <div class="tao">
+                                <span>
+                                    <i class="far fa-image" style="color:#3094ff"></i>
+                                    Ảnh/Video
+                                </span>
+                            </div>
+                            <div class="tao">
+                                <span>
+                                    <i class="fas fa-user-tag" style="color:#007bffa8;"></i>
+                                    Gắn thẻ bạn bè
+                                </span>
+                            </div>
+                            <div class="tao">
+                                <span>
+                                    <i class="fas fa-ellipsis-h" style="color:#a0a0a0;"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color:white; border-radius:10px">
+                        <div class="dphonghop">
+                            <a class="aphonghop" href="#">Phòng họp mặt</a>
+                            <a href="#" style="float:right">Tạo</a>
+                        </div>
+                        <div class="d-flex flex-inline" style="padding:10px 10px 10px 0px;">
+                            <div>
+                                <a class="ava" href="#" style="padding-left:12px!important;">
+
+                                    <img class="rounded-circle" src="animegirl.jpg"
+                                         alt="" aria-label="Bùi Vân" role="img">
+                                </a>
+                            </div>
+                            <script>
+                                $(document).ready(function () {
+                                    $('[data-toggle="tooltip"]').tooltip();
+                                });
+                            </script>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh1.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh2.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh3.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh4.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh5.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh6.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh7.jpg">
+                                </a>
+                            </div>
+                            <div>
+                                <a class="ava" href="#" data-toggle="tooltip" data-placement="top" title="Nói lời chào!">
+                                    <img class="rounded-circle" src="anh8.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="background-color:white">
+                        <div class="dphonghop">
+                            <a class="aphonghop" href="#">Tin</a>
+                            <a href="#" style="float:right">Xem tất cả</a>
+                        </div>
+                        <div class="d-tin">
+                            <div style="width:111px;height:199px;">
+                                <img class="img-tin" src="anh7.jpg" />
+                            </div>
+                            <div style="width:111px;height:199px;">
+                                <img class="img-tin" src="anh1.jpg" />
+                            </div>
+                            <div style="width:111px;height:199px;">
+                                <img class="img-tin" src="anh3.jpg" />
+                            </div>
+                            <div style="width:111px;height:199px;">
+                                <img class="img-tin" src="anh6.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding:10px">
+                        <div class="d-flex flex-row">
+                            <a href="#" style="padding:0px">
+                                <img class="rounded-circle" src="anh3.jpg" style="width:40px;height:40px" />
+                            </a>
+                            <div class="d-flex flex-column" style="width:100%;padding-left:10px">
+                                <div class="d-flex flex-row" style="width:478px;height:18px">
+                                    <a href="#" style="padding:0px">
+                                        <h5 style="color:#385898;font-size:15px;font-weight:bold">Dương Hồng Mai</h5>
+                                    </a>
+                                    <span>
+                                        <i class="fas fa-caret-right"></i>
+                                    </span>
+                                    <a href="#" style="padding:0px">
+                                        <h5 style="color:#385898;font-size:15px;font-weight:bold">Lạc Vào Sở Thú</h5>
+                                    </a>
+                                    <div class="ml-auto">
+                                        <i class="fas fa-ellipsis-h" style="font-size:15px;color:#616770"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row" style="color:#616770;width:428px;height:18px">
+                                    <p>1 giờ</p>
+                                    <i class="fas fa-users" style="margin:4px 0px 0px 12px"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row" style="margin-top:6px">
+                            <div>
+                                <p class="shaun">
+                                    Shaun the sheep version cừu mũi đen Valais ( ko phải Valak nha 😂😂😂😂 )
+                                </p>
+                                <p class="shaun">
+                                    Cừu mũi đen quý hiếm ở Thụy Sĩ
+                                </p>
+                                <p class="shaun">
+                                    Cừu mũi đen có nguồn gốc từ Thụy Sĩ là loài cừu hiếm, được xếp vào nhóm di sản, với bộ lông có hai màu đen trắng xen kẽ, trong đó phần lông đen che kín toàn bộ khuôn mặt....
+                                    <a id="xemthem" href="#" style="">Xem thêm</a>
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <div id="anhshaun">
+                            <img src="shaun.jpg" style="width:100%" ; />
+                        </div>
+                        <div class="d-inline-flex" style="margin:12px 10px 1px 12px;padding-bottom:10px">
+                            <img class="icon" src="icon-like.png" />
+                            <img class="icon" src="icon-love.png" />
+                            <a href="#" id="reaction">Bạn và 1,5K người khác</a>
+                            <a href="#" id="reaction" style="margin-right:auto">97 bình luận</a>
+
+                        </div>
+                        <div class="d-inline-flex" style="border-bottom:1px solid #dadde1;border-top:1px solid #dadde1;padding-top:8px;width:100%;height:42px">
+                            <div class="d-flex justify-content-center" style="width: 238px; height: 42px;">
+                                <a class="a-likecmt" href="#">
+                                    <i class="fas fa-thumbs-up" style="color: rgb(32, 120, 244);font-size:18px"></i>
+                                    <span class="s-likecmt">Thích</span>
+                                </a>
+                            </div>
+                            <div class="d-flex justify-content-center" style="width: 238px; height: 42px;">
+                                <a class="a-likecmt" href="#">
+                                    <i class="far fa-comment-alt" style="color:gray;font-size:18px"></i>
+                                    <span class="s-likecmt">Bình luận</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" style="padding-left:unset">
+                    <div class="card d-inline-flex" style="border: 1px solid #dddfe2; border-radius: 3px; padding: 12px;">
+                        <div class="d-flex" style="display:flex">
+                            <div class="d-lang" style="display:flex;flex-direction:row;flex-wrap:wrap">
+                                <span style="color:#90949C">Tiếng Việt</span>
+                                <a class="a-lang" href="#" style="color: #385898;">English (US)</a>
+                                <a class="a-lang" href="#">中文(台灣)</a>
+                                <a class="a-lang" href="#">Español</a>
+                                <a class="a-lang" href="#">Português (Brasil)</a>
+                            </div>
+                            <div class="justify-content-end" style="border:1px solid rgba(190, 190, 190, 0.80);background-color:#f5f6f7;border-radius: 2px;width:34px;height:28px;padding:5px 5px 5px 9px">
+                                <a href="#" style="padding:unset">
+                                    <i class="fas fa-plus" style="color:#767676;font-size:13px;padding:unset"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-lg-2">
+            <div style="border:1px solid #cccccc;padding:8px 0px 0px 0px;border-top:unset;">
+                <ul style="padding:unset;margin:unset;">
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="https://scontent-hkg4-1.xx.fbcdn.net/v/t1.0-1/cp0/p48x48/103844914_276439420456181_7931631640270363727_n.jpg?_nc_cat=110&amp;_nc_sid=dbb9e7&amp;_nc_ohc=LaU5xUKMN1QAX82r84F&amp;_nc_ht=scontent-hkg4-1.xx&amp;oh=b08a7e3e2c26d7d5ad035af99dc73acd&amp;oe=5F3C1A37"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Nguyễn Đức Toàn
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="https://scontent.fhan5-7.fna.fbcdn.net/v/t1.0-1/cp0/p48x48/91590329_4200945963264230_8866989660816015360_n.jpg?_nc_cat=100&amp;_nc_sid=dbb9e7&amp;_nc_ohc=LviAclr3dfIAX_NCLS3&amp;_nc_ht=scontent.fhan5-7.fna&amp;oh=944d597571a0699e87fdd0a5d2311441&amp;oe=5F399520"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Nguyễn Đồng Khánh
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="anh1.jpg"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Nguyễn Phương
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="anh2.jpg"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Minh Nhật
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="https://scontent.fhan5-7.fna.fbcdn.net/v/t31.0-1/cp0/c36.0.80.80a/p80x80/28162213_1013354418816506_6159880786386287006_o.jpg?_nc_cat=103&amp;_nc_sid=dbb9e7&amp;_nc_ohc=SbET0ZVu4mgAX-1lBdZ&amp;_nc_ht=scontent.fhan5-7.fna&amp;oh=dae4b56fc7616acd155a000563e3eea4&amp;oe=5F3ADCDD"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Trường Jang
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li-chat">
+                        <a href="#" style="text-decoration:none">
+                            <div style="display:inline">
+                                <img src="https://scontent.fhan5-7.fna.fbcdn.net/v/t1.0-1/cp0/p80x80/98320590_2425981097693597_8338590700656394240_n.jpg?_nc_cat=103&amp;_nc_sid=dbb9e7&amp;_nc_ohc=NgBiSDZY9kcAX_PXc_S&amp;_nc_ht=scontent.fhan5-7.fna&amp;oh=5d801371eab10aafcc346b8d16c2b8b1&amp;oe=5F399139"
+                                     width="32" height="32" class="rounded-circle img-chat">
+                                <span class="s-namechat">
+                                    Nguyễn Linh
+                                </span>
+                                <span class="s-circle" style="float:right">
+                                    <i class="fas fa-circle"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="background-color:#f5f6f7">
+                        <!--<footer class="mr-auto" style="position:fixed">-->
+                            <div class="d-inline-flex flex-row" style="background-color:#f5f6f7;margin:unset;border-radius:5px">
+                                <span style="padding-left:4px">
+                                    <i class="fas fa-search" style="color:#d0d0d0c7;padding:6px;font-size:13px"></i>
+                                </span>
+                                <span style="color:#cccccc">
+                                    <input type="text" placeholder="Tìm kiếm" style="background-color:#f5f6f7;border:unset;width:104px" />
+                                </span>
+                                <div class="justify-content-end">
+                                    <span class="s-setchat">
+                                        <i class="fas fa-cog" style="color:#b5b5b5;"></i>
+                                    </span>
+                                    <span class="s-setchat">
+                                        <i class="fas fa-edit" style="color:#b5b5b5;"></i>
+                                    </span>
+                                    <span class="s-setchat">
+                                        <i class="fas fa-user-plus" style="color:#b5b5b5;"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        <!--</footer>-->
+                    </li>
+                </ul>
+
+            </div>
+            
+        </div>
+    </div>
+   
+</body>
+</html>
